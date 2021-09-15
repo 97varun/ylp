@@ -1,0 +1,23 @@
+.brand-logo, #search-bar {
+    padding-left: 1% !important;
+}
+.brand-logo {
+    z-index: 2;
+}
+#search-bar {
+    width: 40%; 
+    margin-left: 30%;
+    border: none !important;
+    cursor: text;
+}
+#search-bar:focus, #search-bar:hover {
+    background-color: white !important;
+    color: black !important;
+    cursor: text;
+}
+#search-bar:focus::placeholder, #search-bar:hover::placeholder {
+    color: black;
+}
+.card-title, .modal-content {
+    font-size: 20px !important;
+}
