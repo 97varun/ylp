@@ -47,8 +47,6 @@ def create_learning_playlist() -> json:
     # Append 'learn' keyword to get more relevant videos
     topics = map(lambda topic: f'Learn {topic}', topics)
 
-    print(list(topics))
-
     # Get youtube client
     youtube_client = get_youtube_client()
 
