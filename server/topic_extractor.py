@@ -11,9 +11,11 @@ sample_inputs = [
     "I want to learn about USC",
     "I am learning quantum mechanics",
     "I want to learn c++",
+    "quantum mechanics",
+    "quantum computing and machine learning"
 ]
 
-PATTERNS = ['dobj', 'conj', 'pobj']
+PATTERNS = ['dobj', 'conj', 'pobj', 'ROOT']
 
 class TopicExtractor:
     def __init__(self):
