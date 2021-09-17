@@ -26,13 +26,18 @@ var xhrObj = {
             console.log(`Playlist: ${result['playlistUrl']}`);
 
             outputTitle.innerHTML = `Learning playlist(s)`;
-            outputContent.innerHTML = `${result['playlistUrl'].join(', ')}`;
+            
+            var playlistUrlAchors = result['playlistUrl'].map((playlistUrl) => {
+                return `<a href="${playlistUrl}">${playlistUrl}</a>`
+            });
+
+            outputContent.innerHTML = `${playlistUrlAchors.join(', ')}`;
         }
         else if (this.readyState == 4 && this.status >= 400) {
             var result = JSON.parse(this.responseText);
             console.log(`Error: ${result['error']}`);
 
-            outputContent.innerHTML += `Error: ${result['error']}`;
+            outputContent.innerHTML = `Error: ${result['error']}`;
         }
     }
 }
